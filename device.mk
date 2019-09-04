@@ -42,6 +42,10 @@ $(call inherit-product, $(DEVICE_PATH)/device_prop.mk)
 # FM
 BOARD_HAVE_QCOM_FM := true
 
+# Overlays
+PRODUCT_PACKAGES += \
+    NoCutoutOverlay
+
 # Permissions
 PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml
@@ -95,3 +99,4 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_PACKAGES += \
 	libmmcamera_mg_faceppshim
+
