@@ -44,6 +44,9 @@ BOARD_HAVE_QCOM_FM := true
 
 # Overlays
 PRODUCT_PACKAGES += \
+    LavenderFrameworksOverlay \
+    LavenderSettingsOverlay \
+    LavenderSystemUIOverlay \
     NoCutoutOverlay \
     NotchBarKiller
 
