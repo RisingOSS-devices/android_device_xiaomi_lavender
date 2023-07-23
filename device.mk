@@ -33,6 +33,10 @@ TARGET_BOOTANIMATION_SIZE := 1080
 TARGET_SCREEN_HEIGHT := 2340
 TARGET_SCREEN_WIDTH := 1080
 
+# Camera shim
+PRODUCT_PACKAGES += \
+    camera.sdm660_shim
+
 # Consumerir
 BOARD_HAVE_IR := true
 
