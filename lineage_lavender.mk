@@ -24,14 +24,16 @@
 # Inherit device configuration
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
-# Inherit some common EvoX stuff
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-EVO_BUILD_TYPE := OFFICIAL
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_STOCK_ARCORE := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+# Inherit some common Lineage stuff
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+RISING_BUILDTYPE := OFFICIAL
+RISING_MAINTAINER := Coptan
+TARGET_BUILD_APERTURE_CAMERA := true
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_CORE_GMS_EXTRAS := true
 TARGET_SUPPORTS_QUICK_TAP := true
-TARGET_USES_MINI_GAPPS = true
 
 # Build Description
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -43,7 +45,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := "xiaomi/lavender/lavender:10/QKQ1.190910.002/V12.5.3.0.QFGCNXM:user/release-keys"
 
 # Device identifier
-PRODUCT_NAME := evolution_lavender
+PRODUCT_NAME := lineage_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
